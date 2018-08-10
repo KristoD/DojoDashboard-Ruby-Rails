@@ -1,0 +1,22 @@
+<h1><%=@dojo.city%>'s <%=@student.first_name%> <%=@student.last_name%></h1>
+
+<p><%=@student.email%></p>
+
+<table>
+    <thead>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+    </thead>
+    <tbody>
+        <% @mates.each do |s| %>
+            <tr>
+                <td><%=s.first_name%></td>
+                <td><%=s.last_name%></td>
+                <td><%=s.email%></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<a href="/dojos">Home</a> | <a href="/dojos/<%=@dojo.id%>/students/<%=@student.id%>/edit">Edit</a>
